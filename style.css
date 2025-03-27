@@ -1,0 +1,106 @@
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    /* Centers horizontally */
+    align-items: center;
+    /* Centers vertically */
+    height: 100vh;
+    /* Full viewport height */
+    margin: 0;
+    /* Remove default margin */
+    font-family: 'inter', sans-serif;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    /* Stack items in a column */
+    justify-content: center;
+    /* Center items vertically */
+    align-items: center;
+    /* Center items horizontally */
+    width: 100%;
+    max-width: 650px;
+    /* Adjust width as needed */
+    text-align: center;
+    border: solid 1px #B3B3B3;;
+    padding:  40px 100px;
+}
+
+
+@media (max-width: 768px) { /* Tablets */
+    .main-container {
+        padding: 30px 30px;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) { /* Mobile */
+    .main-container {
+        padding: 20px 10px;
+        max-width: 95%;
+    }
+}
+form {
+    width: 100%;
+}
+
+.form-label {
+    text-align: left;
+    /* Ensure labels remain left-aligned */
+    display: block;
+    /* Make sure they take full width */
+    color: black;
+    font-family: 'inter', sans-serif;
+}
+
+.input-group-text {
+    background: none !important;
+    /* Remove background */
+    border-right: 0 !important;
+    /* Remove right border */
+    padding-right: 0px !important;
+    /* Reduce space between icon and text */
+}
+
+.input-group .form-control {
+    border-left: 0 !important;
+    /* Remove input's left border */
+    padding-left: 5px !important;
+    /* Reduce left padding of input field */
+}
+
+
+.form-control {
+    width: 537px;
+    height: 54px;
+    border: #757575 solid 1px;
+}
+
+.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: #ccc !important;
+    /* Optional: Change border color */
+}
+
+
+
+::placeholder {
+    font-size: 18px;
+    /* Adjust size */
+    color: 757575;
+    /* Optional: Change color */
+    font-weight: 400;
+    /* Adjust weight if needed */
+}
+.custom-btn:hover {
+    background-color: #153bb5 !important; /* Darker blue on hover */
+}
+a{
+    text-decoration: none !important;
+}
+.forgetmargin{
+    margin-top: 158px;
+}
