@@ -14,92 +14,171 @@
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+      
 </head>
 
 <body>
-  <!-- Header -->
-<nav style="background-color: #6774DF;" class="navbar navbar-expand-lg px-3">
-    <div class="container-fluid d-flex align-items-center">
-        
-        <!-- Left: Dashboard Name (25%) -->
-        <div class="col-3 d-flex align-items-center">
-            <a style="font-weight: 900 ; font-family:  Montserrat, sans-serif;" class="navbar-brand fs-2  text-white" href="#">KYC Tool</a>
-        </div>
+    <!-- Header -->
+    <nav style="background-color: #6774DF;" class="navbar navbar-expand-lg px-3">
+        <div class="container-fluid d-flex align-items-center">
 
-        <!-- Center: Search Bar (50%) -->
-        <div class="col-6">
-            <form class="d-flex" style="width: 100%;">
-                <div class="input-group" style="width: 100%; height: 48px; background-color: #5A66C4; border-radius: 10px; border: none; overflow: hidden;">
-                    <span class="input-group-text" style="background-color: transparent; border: none; padding: 0 10px;">
-                        <img src="./Magnifer--Streamline-Solar-Ar.svg" alt="">
-                    </span>
-                    <input class="form-control border-0 shadow-none text-white" type="search" placeholder="Search"
-                        style="background-color: transparent; border: none; box-shadow: none; outline: none; height: 100%;">
+            <!-- Left: Dashboard Name (25%) -->
+            <div class="col-3 d-flex align-items-center">
+                <a style="font-weight: 900 ; font-family:  Montserrat, sans-serif;"
+                    class="navbar-brand fs-2  text-white" href="#">KYC Tool</a>
+            </div>
+
+            <!-- Center: Search Bar (50%) -->
+            <div class="col-6">
+                <form class="d-flex" style="width: 100%;">
+                    <div class="input-group"
+                        style="width: 100%; height: 48px; background-color: #5A66C4; border-radius: 10px; border: none; overflow: hidden;">
+                        <span class="input-group-text"
+                            style="background-color: transparent; border: none; padding: 0 10px;">
+                            <img src="./Magnifer--Streamline-Solar-Ar.svg" alt="">
+                        </span>
+                        <input class="form-control border-0 shadow-none text-white" type="search" placeholder="Search"
+                            style="background-color: transparent; border: none; box-shadow: none; outline: none; height: 100%;">
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right: Notifications & User Profile (25%) -->
+            <div class="col-3 d-flex justify-content-end align-items-center gap-4">
+                <!-- Notification Icon -->
+                <img src="./Bell--Streamline-Solar.svg" alt="" style="width: 30px; height: 30px; cursor: pointer;">
+
+                <!-- User Profile -->
+                <div class="d-flex align-items-center gap-2">
+                    <span class="fw-semibold text-light fs-5">Charlie Dean</span>
+                    <img src="./image.svg" alt="User">
                 </div>
-            </form>
-        </div>
-
-        <!-- Right: Notifications & User Profile (25%) -->
-        <div class="col-3 d-flex justify-content-end align-items-center gap-4">
-            <!-- Notification Icon -->
-            <img src="./Bell--Streamline-Solar.svg" alt="" style="width: 30px; height: 30px; cursor: pointer;">
-            
-            <!-- User Profile -->
-            <div class="d-flex align-items-center gap-2">
-                <span class="fw-semibold text-light fs-5">Charlie Dean</span>
-                <img src="./image.svg" alt="User">
             </div>
-        </div>
 
+        </div>
+    </nav>
+
+
+
+    <div class="container-fluid">
+        <!-- This is a bootstrap flexbox system -->
+        <div class="dashboard-layout">
+            <!-- Sidebar -->
+            <nav class="sidebar" id="sidebar">
+                <p class="text-left px-3 pt-3 mt-3 fw-4">Menu</p>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="./Dashboard-3--Streamline-Core (1) 1.svg" alt="">
+                            Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="./Case--Streamline-Solar.svg" alt=""> User Cases</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="./Document-Text--Streamline-Solar.svg" alt="">
+                            Documents</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="./Checklist-Minimalistic--Streamline-Solar.svg" alt="">
+                            Checklist</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="./Clipboard-Text--Streamline-Solar.svg" alt=""> BPL
+                            Compliance</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="./Settings--Streamline-Solar.svg" alt=""> Settings</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <h2 class="text-dark mb-4 mt-2">Dashboard</h2>
+                <div class="cards">
+                    <div class="box">
+
+                        <div  class="canvass">
+                            <div class="circular-progress">
+                                <span class="progress-value">40%</span>
+                                
+                            </div>
+                           
+                        </div>
+
+
+                        <div>
+                            <h3>223</h3>
+                            <p>Total Users <br> Registered</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="canvass">
+                            <div class="circular-progress" data-color="#80C76C">
+                                <span class="progress-value">65%</span>
+                            </div>
+
+                        </div>
+                        <div>
+                            <h3>85</h3>
+                            <p>KYCs In Progress</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="canvass">
+                            <div class="circular-progress" data-color="#6774DF">
+                                <span class="progress-value">90%</span>
+                            </div>
+                           
+                        </div>
+                        <div>
+                            <h3>85</h3>
+                            <p>Completed <br>Verifications</p>
+
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="canvass">
+                            <div class="circular-progress">
+                                <div class="progress-content">
+                                    <span class="progress-value">40%</span>
+                                    <span class="progress-text">Completed</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3>85</h3>
+                            <p>Flagged <br> Documents</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="canvass">
+                            <div class="circular-progress" data-color="#EF6386">
+                                <span class="progress-value">40%</span>
+                            </div>
+
+                        </div>
+                        <div>
+                            <h3>85</h3>
+                            <p>Expiring <br> Documents</p>
+                        </div>
+
+                    </div>
+                   
+                </div>
+            </main>
+        </div>
     </div>
-</nav>
 
 
-
-      <!-- Sidebar -->
-<div class="sidebar" id="sidebar">
-    <h4 class="text-center py-3">Dashboard</h4>
-    <ul class="nav flex-column">
-        <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-house-door"></i> Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-bar-chart"></i> Analytics</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-gear"></i> Settings</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-folder"></i> Files</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-box-arrow-right"></i> Logout</a>
-        </li>
-    </ul>
-</div>
-
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <h1>Welcome to Your Dashboard</h1>
-        <p>Here you can view your analytics, reports, and manage settings.</p>
-
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Analytics</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, nulla sed volutpat elementum, dolor nisi faucibus tortor, id fermentum elit urna in est.</p>
-            </div>
-            <div class="col-md-6">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, nulla sed volutpat elementum, dolor nisi faucibus tortor, id fermentum elit urna in est.</p>
-            </div>
-        </div>
-    </div>
 
     <script src="script.js"></script>
     <!-- bootstrap cdn -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+       
 </body>
 
 </html>

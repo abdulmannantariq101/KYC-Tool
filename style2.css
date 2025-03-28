@@ -1,8 +1,9 @@
 /* General Reset */
-body {
-    font-family: 'Inter', sans-serif;
+body , html {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -59,16 +60,17 @@ body {
     color: #757575;
     position: fixed;
     top: 0;
-    left: -250px; /* Initially hidden on small screens */
+    left: 0; /* Always visible on large screens */
     padding-top: 60px;
     transition: all 0.3s ease-in-out;
     border-right: 1px solid #e0e0e0;
     overflow-y: auto;
+    z-index: 10;
+    
+    
 }
 
-.sidebar.active {
-    left: 0;
-}
+
 
 /* Sidebar Toggle Button */
 #sidebarToggle {
@@ -79,55 +81,15 @@ body {
     cursor: pointer;
     z-index: 1100;
     position: absolute;
-    right: 15px; /* Move to the right */
+    right: 15px;
     top: 15px;
+    
 }
 
-/* Adjust Navbar on Small Screens */
-@media (max-width: 992px) {
-    .navbar .container-fluid {
-        flex-wrap: nowrap;
-    }
 
-    .navbar-brand {
-        margin-right: auto; /* Keep KYC Tool aligned */
-    }
 
-    .d-flex.ms-auto {
-        flex-grow: 1;
-        justify-content: center;
-    }
 
-    #sidebarToggle {
-        display: block;
-    }
-}
-
-/* Hide Sidebar Toggle on Large Screens */
-@media (min-width: 992px) {
-    #sidebarToggle {
-        display: none !important;
-    }
-
-    .sidebar {
-        left: 0;
-    }
-}
-
-/* Main Content */
-.main-content {
-    margin-left: 250px;
-    padding: 80px 20px 20px;
-    transition: margin-left 0.3s ease;
-}
-
-/* Adjust when sidebar is collapsed */
-@media (max-width: 992px) {
-    .main-content {
-        margin-left: 0;
-    }
-}
-    /* Hide search bar, profile name, and notification icon on small screens */
+/* Hide search bar, profile name, and notification icon on small screens */
 @media (max-width: 992px) {
     form.d-flex { 
         display: none !important; /* Hide Search Bar */
@@ -135,4 +97,167 @@ body {
     .d-flex.align-items-center.gap-4 {
         display: none !important; /* Hide Profile Name & Notification */
     }
+}
+
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 7px; /* Space between the image and text */
+    color: #757575; /* Change this color as needed */
+    text-decoration: none; /* Remove underline */
+    font-weight: 500; /* Make text slightly bold */
+    padding: 10px 15px; /* Add padding */
+    transition: 0.3s ease-in-out;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight:normal;
+}
+.sidebar .nav-link:hover {
+    color: #6774DF !important; /* Ensure hover color */
+   
+}
+.sidebar .nav-link:active {
+    color: #6774DF !important; /* Ensure active color */
+}
+
+
+
+
+
+
+
+.main-content {
+    margin-left: 250px; /* Same as sidebar width */
+    width: calc(100% - 250px); /* Adjust main content width */
+    padding: 20px;
+}
+
+@media (max-width: 985px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+
+
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+     /* Distributes items evenly */
+    gap: 10px; /* Adds spacing between boxes */
+}
+
+.box {
+    
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border: #DDDDDD solid 1px;
+    padding: 20px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    flex: 1; /* Ensures equal distribution */
+   
+}
+
+/* Tablet Layout */
+@media (max-width: 1024px) {
+    .box {
+        flex: 1 1 calc(50% - 10px); /* 2 columns per row */
+    }
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+    .box {
+        flex: 1 1 100%; /* 1 column per row */
+    }
+
+}
+.box img {
+    /* width: 40px;
+    height: 40px; */
+    margin-right: 10px; /* Creates space between image and text */
+
+}
+
+.box p {
+    margin: 0;
+    font-size: 14px;
+    color: #757575;
+    font-weight: 500;
+    font-family: 'inter', sans-serif;
+    margin-left: 20px;
+}
+
+.canvas {
+    display: flex;
+    width: 300px; /* Reduced width */
+    padding: 20px 0; /* Less padding */
+    border-radius: 6px;
+    background: #fff;
+    flex-direction: column;
+    align-items: center;
+  z-index: 1; /* Lower priority */
+    
+    
+}.circular-progress {
+    position: relative;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background: conic-gradient(#FF7077 40%, rgba(119, 85, 119, 0.275) 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 0; /* Send it to the back */
+}
+
+.circular-progress .progress-value {
+    position: relative;
+    z-index: 1; /* Ensure it appears above */
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.circular-progress .progress-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Ensure .progress-text only applies if it's inside .progress-content */
+.circular-progress .progress-content .progress-text {
+    font-size: 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+
+
+a[href*="canvasjs.com"] {
+    display: none !important;
 }
